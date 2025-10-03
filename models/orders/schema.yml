@@ -1,0 +1,22 @@
+
+version: 2
+
+sources:
+  - name: bq_source
+    database: edwhsk1
+    schema: dbt_test
+    tables:
+      - name: orders
+
+models:
+    - name: transformed_orders
+      description: "A order transfored dbt model"
+      columns:
+          - name: order_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+      config:
+        materialized: table
+        alias: order_rpt
