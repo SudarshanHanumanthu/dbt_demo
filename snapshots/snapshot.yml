@@ -1,0 +1,12 @@
+
+version: 2
+sources:
+  - name: bq_snapshot
+    database: edwhsk1
+    schema: dbt_test
+    tables:
+      - name: customers
+
+    config:
+        materialized: table
+        
