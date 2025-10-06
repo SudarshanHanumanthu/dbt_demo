@@ -6,6 +6,7 @@ sources:
     schema: dbt_test
     tables:
       - name: orders
+      - name: test_orders_mege
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"
