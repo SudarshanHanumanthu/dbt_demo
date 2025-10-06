@@ -1,6 +1,11 @@
 
 version: 2
-
+sources:
+  - name: bq_source1
+    database: edwhsk1
+    schema: dbt_test
+    tables:
+      - name: orders
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"
